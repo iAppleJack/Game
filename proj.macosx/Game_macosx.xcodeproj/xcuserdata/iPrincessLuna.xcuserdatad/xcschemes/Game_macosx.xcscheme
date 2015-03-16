@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "495BFDEF1AB4AD3100C27848"
-               BuildableName = "Game"
-               BlueprintName = "Game"
-               ReferencedContainer = "container:Game.xcodeproj">
+               BlueprintIdentifier = "049B572D1871FBE900EF3C66"
+               BuildableName = "Game_macosx.app"
+               BlueprintName = "Game_macosx"
+               ReferencedContainer = "container:Game_macosx.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "495BFDEF1AB4AD3100C27848"
-            BuildableName = "Game"
-            BlueprintName = "Game"
-            ReferencedContainer = "container:Game.xcodeproj">
+            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
+            BuildableName = "Game_macosx.app"
+            BlueprintName = "Game_macosx"
+            ReferencedContainer = "container:Game_macosx.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "495BFDEF1AB4AD3100C27848"
-            BuildableName = "Game"
-            BlueprintName = "Game"
-            ReferencedContainer = "container:Game.xcodeproj">
+            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
+            BuildableName = "Game_macosx.app"
+            BlueprintName = "Game_macosx"
+            ReferencedContainer = "container:Game_macosx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "495BFDEF1AB4AD3100C27848"
-            BuildableName = "Game"
-            BlueprintName = "Game"
-            ReferencedContainer = "container:Game.xcodeproj">
+            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
+            BuildableName = "Game_macosx.app"
+            BlueprintName = "Game_macosx"
+            ReferencedContainer = "container:Game_macosx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

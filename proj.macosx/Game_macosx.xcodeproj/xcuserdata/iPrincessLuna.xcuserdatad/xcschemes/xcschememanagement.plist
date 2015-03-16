@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Game.xcscheme</key>
+		<key>Game_macosx.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>495BFDEF1AB4AD3100C27848</key>
+		<key>049B572D1871FBE900EF3C66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
