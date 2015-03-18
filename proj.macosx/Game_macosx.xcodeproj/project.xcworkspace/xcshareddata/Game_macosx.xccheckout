@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>78BC2F4D-602C-4BAE-88A9-542C16B69FD0</string>
+	<string>2C89D4E4-093D-4043-A76D-44E1E5DA395D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Game_macosx</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>70DC3EA0-C7E4-4517-ACF0-E8CE924890C1</key>
-		<string>https://github.com/iAppleJack/Game.git</string>
+		<key>3C542B08-01D0-4322-A139-2EF9F35BC2C1</key>
+		<string>https://github.com/iAppleJack/Game</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>proj.macosx/Game_macosx.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>70DC3EA0-C7E4-4517-ACF0-E8CE924890C1</key>
+		<key>3C542B08-01D0-4322-A139-2EF9F35BC2C1</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/iAppleJack/Game.git</string>
+	<string>https://github.com/iAppleJack/Game</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>70DC3EA0-C7E4-4517-ACF0-E8CE924890C1</string>
+	<string>3C542B08-01D0-4322-A139-2EF9F35BC2C1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>70DC3EA0-C7E4-4517-ACF0-E8CE924890C1</string>
+			<string>3C542B08-01D0-4322-A139-2EF9F35BC2C1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Game</string>
 		</dict>

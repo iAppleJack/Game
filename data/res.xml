@@ -3,7 +3,8 @@
 	<set path = "images" />
 	<atlas>
 		<image file="anim.png" cols = "7" />
-		<image file="button.png"/>		
+		<image file="button.png"/>
+        <image file="head.png"/>
 	</atlas>
 	
 	<set path = "fonts" />

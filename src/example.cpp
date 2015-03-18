@@ -5,18 +5,35 @@ using namespace oxygine;
 //it is our resources
 //in real project you would have more than one Resources declarations. 
 //It is important on mobile devices with limited memory and you would load/unload them
+
+/*
+ 
+ */
 Resources gameResources;
 
 
 class MainActor: public Actor
 {
+private:
+    spSprite newGameButton;
 public:
 	spTextField _text;
 	spSprite	_button;
 
 	MainActor()
-	{	
+	{
+        EventCallback cb = CLOSURE(this, &MainActor::buttonClicked);
+        newGameButton = new Sprite();
+        newGameButton->setResAnim(gameResources.getResAnim("anim"));
+        ResAnim *animation = gameResources.getResAnim("anim");
+        newGameButton->addTween(TweenAnim(animation), 500, -1);
+        newGameButton->setScale(0.5, 0.5);
+        getStage()->addEventListener(KeyEvent::KEY_DOWN, CLOSURE(this, &MainActor::keylistener));
+        
+
+        addChild(newGameButton);
 		//create simple Sprite
+        
 		spSprite button = new Sprite();
 
 		//setup it:
@@ -28,7 +45,7 @@ public:
 		button->setPosition(pos);
 
 		//handle click to button
-		EventCallback cb = CLOSURE(this, &MainActor::buttonClicked);
+		
 		button->addEventListener(TouchEvent::CLICK, cb);
 
 #ifdef CLOSURE_FUNCTION //if your compiler supports lambda
@@ -67,6 +84,45 @@ public:
 		_text = text; 
 	}
 
+    void keylistener(Event *event)
+    {
+        KeyEvent* e = (KeyEvent*)event;
+        double eX = 0.0;
+        double eY = 0.0;
+        Vector2 destPos = newGameButton->getPosition();
+        switch(e->data->keysym.sym)
+        {
+                case SDLK_DOWN:
+                eY = newGameButton->getScaleY()*newGameButton->getHeight();
+                
+                break;
+                case SDLK_UP:
+                eY = -newGameButton->getScaleY()*newGameButton->getHeight();
+                break;
+                case SDLK_RIGHT:
+                eX = newGameButton->getScaleX()*newGameButton->getWidth();
+                break;
+                case SDLK_LEFT:
+                eX = -newGameButton->getScaleX()*newGameButton->getWidth();
+                break;
+                default:
+                return;
+        }
+        
+        spTweenQueue tweenQueue = new TweenQueue();
+		tweenQueue->setDelay(1);
+		//first, move sprite to dest position
+        
+		tweenQueue->add(Sprite::TweenPosition(newGameButton->getX() + eX,newGameButton->getY() + eY), 500, 1);
+		//then fade it out smoothly
+		//tweenQueue->add(Sprite::TweenAlpha(0), 500, 1);
+		
+		newGameButton->addTween(tweenQueue);
+        
+        //newGameButton->setX(newGameButton->getX() + eX);
+        //newGameButton->setY(newGameButton->getY() + eY);
+    }
+    
 	void buttonClicked(Event *event)
 	{
 		//user clicked to button		
