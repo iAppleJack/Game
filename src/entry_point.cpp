@@ -8,7 +8,9 @@ You could start from example.cpp and example.h it has main functions being calle
 #include "Stage.h"
 #include "DebugActor.h"
 
-#include "example.h"
+
+#include "Menu.h"
+
 
 
 using namespace oxygine;
@@ -17,7 +19,7 @@ using namespace oxygine;
 //called each frame
 int mainloop()
 {
-	example_update();
+	
 	//update our stage
 	//update all actors. Actor::update would be called also for all children
 	getStage()->update();
@@ -50,13 +52,14 @@ void run()
 
 #if OXYGINE_SDL || OXYGINE_EMSCRIPTEN
 	//we could setup initial window size on SDL builds
-	desc.w = 960;
-	desc.h = 640;
+
+    desc.w = 1080;
+    desc.h = 720;
 	//marmalade settings could be changed from emulator's menu
 #endif
 
 
-	example_preinit();
+	
 	core::init(&desc);
 
 
@@ -67,9 +70,9 @@ void run()
 
 	//DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff
 	DebugActor::show();
-		
+    
+    load();
 	//initialize this example stuff. see example.cpp
-	example_init();
 
 #ifdef EMSCRIPTEN
 	/*
@@ -78,7 +81,7 @@ void run()
 	*/	
 	return;
 #endif
-
+    
 
 	//here is main game loop
 	while (1)
@@ -99,7 +102,6 @@ void run()
 	//but now we want delete it by hands
 
 	//check example.cpp
-	example_destroy();
 
 
 	//renderer.cleanup();
@@ -113,6 +115,7 @@ void run()
 
 	ObjectBase::__stopTracingLeaks();
 	//end
+    
 }
 
 #ifdef __S3E__
