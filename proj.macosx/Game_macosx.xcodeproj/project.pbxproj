@@ -23,6 +23,7 @@
 		494381A31AB9DF1F00645332 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381A11AB9DF1F00645332 /* Menu.cpp */; };
 		494381AE1AB9EEFF00645332 /* Bart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381AC1AB9EEFF00645332 /* Bart.cpp */; };
 		494381B41ABB36F200645332 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381B21ABB36F200645332 /* Box.cpp */; };
+		494381B71ABB67E400645332 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381B51ABB67E400645332 /* Background.cpp */; };
 		C8860D93875589970329DCCD /* data.js in Resources */ = {isa = PBXBuildFile; fileRef = 4DA100C319512824B7570663 /* data.js */; };
 		CD59C69314E9E74CD0A11E03 /* pack.py in Resources */ = {isa = PBXBuildFile; fileRef = F6123B1E6FE4471A00F49751 /* pack.py */; };
 		EFF139F8BA484314F7AAF645 /* res.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5DE458993031811A4C7D28C1 /* res.xml */; };
@@ -109,6 +110,8 @@
 		494381AD1AB9EEFF00645332 /* Bart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bart.h; sourceTree = "<group>"; };
 		494381B21ABB36F200645332 /* Box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box.cpp; sourceTree = "<group>"; };
 		494381B31ABB36F200645332 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		494381B51ABB67E400645332 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
+		494381B61ABB67E400645332 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
 		4DA100C319512824B7570663 /* data.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wtf; name = data.js; path = ../data/data.js; sourceTree = "<group>"; };
 		5DE458993031811A4C7D28C1 /* res.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wtf; name = res.xml; path = ../data/res.xml; sourceTree = "<group>"; };
 		7F3B12E3C9D554D9FE28101D /* images */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = images; path = ../data/images; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				494381AD1AB9EEFF00645332 /* Bart.h */,
 				494381B21ABB36F200645332 /* Box.cpp */,
 				494381B31ABB36F200645332 /* Box.h */,
+				494381B51ABB67E400645332 /* Background.cpp */,
+				494381B61ABB67E400645332 /* Background.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				494381B41ABB36F200645332 /* Box.cpp in Sources */,
 				491112C21AB9C64C003F3FBB /* Game.cpp in Sources */,
 				494381AE1AB9EEFF00645332 /* Bart.cpp in Sources */,
+				494381B71ABB67E400645332 /* Background.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

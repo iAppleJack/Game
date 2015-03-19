@@ -20,6 +20,7 @@ Bart::Bart(double x, double y)
 {
     this->speed.x = 0;
     this->speed.y = 0;
+    this->lenght = 0.0;
     this->step = 0;
     this->icon = new Sprite();
     this->icon->setPosition(x,y);

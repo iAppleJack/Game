@@ -8,6 +8,8 @@
         <image file="pump.png"/>
         <image file="sky.jpg"/>
         <image file="box.png"/>
+        <image file="background1.png"/>
+        <image file="background2.png"/>
 	</atlas>
 	
 	<set path = "fonts" />

@@ -2,6 +2,7 @@
 #include "res.h"
 #include "Bart.h"
 #include "Box.h"
+#include "Background.h"
 #include <string>
 
 #include <vector>  //for std::vector
@@ -17,39 +18,52 @@ spTextField textfield;
 spTextField testfield;
 std::vector<Box> boxes;
 int hit = 0;
+Background *background;
 void Game::init()
 {
 	//scene layer would have size of display
     
-    
-    
+    boxes.push_back(*new Box(25,25,1000,520));
     boxes.push_back(*new Box(25,25,1100,520));
-    boxes.push_back(*new Box(25,25,2500,520));
-    boxes.push_back(*new Box(25,25,3200,520));
+    boxes.push_back(*new Box(25,25,1700,520));
     boxes.push_back(*new Box(25,25,4000,520));
     boxes.push_back(*new Box(25,25,5000,520));
-    boxes.push_back(*new Box(25,25,6000,520));
-    boxes.push_back(*new Box(25,25,7500,520));
-    boxes.push_back(*new Box(25,25,7600,520));
-    boxes.push_back(*new Box(25,25,9000,520));
-    boxes.push_back(*new Box(25,25,9350,520));
-    boxes.push_back(*new Box(25,25,9350,420));
-    boxes.push_back(*new Box(25,25,11000,520));
-    boxes.push_back(*new Box(25,25,11100,420));
-    boxes.push_back(*new Box(25,25,13000,520));
-    boxes.push_back(*new Box(25,25,13500,520));
-    boxes.push_back(*new Box(25,25,13900,520));
-    boxes.push_back(*new Box(25,25,14300,520));
-    boxes.push_back(*new Box(25,25,14500,520));
+    boxes.push_back(*new Box(25,25,5000,420));
+    boxes.push_back(*new Box(25,25,6500,520));
+    boxes.push_back(*new Box(25,25,6500,420));
+    boxes.push_back(*new Box(25,25,6550,320));
+    
     
 
 	setSize(getStage()->getSize());
+    background = new Background(getStage()->getWidth(), getStage()->getHeight());
+    
+    
+    background->icon3->attachTo(this);
+    background->icon4->attachTo(this);
+    background->icon1->attachTo(this);
+    
+    background->icon2->attachTo(this);
+
+    /*spSprite sky2 = new Sprite;
+	sky2->setResAnim(res::ui.getResAnim("background2"));
+    double width = getStage()->getWidth()/sky2->getWidth();
+    double heigth = getStage()->getHeight()/sky2->getHeight();
+    sky2->setScale(width, heigth);
+	sky2->attachTo(this);
+    
+    
     
     spSprite sky = new Sprite;
-	sky->setResAnim(res::ui.getResAnim("sky"));
-	sky->attachTo(this);
-    pump = new Sprite;
+	sky->setResAnim(res::ui.getResAnim("background1"));
+    width = getStage()->getWidth()/sky->getWidth();
+    heigth = getStage()->getHeight()/sky->getHeight();
+    sky->setScale(width, heigth);
+	sky->attachTo(this);*/
+    
 
+    
+    pump = new Sprite;
     pump->setResAnim(res::ui.getResAnim("pump"));
     pump->setScale(4, 0.5);
     double pumpheight = pump->getHeight()*pump->getScaleY();
@@ -93,36 +107,14 @@ void Game::init()
 
 }
 
-void colision()
-{
-    for (int i = 0; i < boxes.size(); i++)
-    {
-        spSprite box = boxes[i].icon;
-        spSprite bartsprite = b->icon;
-        double ax1 = box->getX();
-        double ax2 = box->getX() + box->getWidth()*box->getScaleX();
-        double ay1 = box->getY();
-        double ay2 = box->getY() + box->getHeight()*box->getScaleY();
-        
-        double x1 = bartsprite->getX();
-        double x2 = bartsprite->getX() + bartsprite->getWidth()*bartsprite->getScaleX();
-        double y1 = bartsprite->getY();
-        double y2 = bartsprite->getY() + bartsprite->getHeight()*bartsprite->getScaleY();
-        if (((x1 > ax1 && x1 < ax2)
-            || (x2 > ax1 && x2 < ax2))
-            && ((y1 > ay1 && y1 < ay2)
-                || (y2 > ay1 && y2 < ay2)))
-        {
-            hit++;
-        }
-    }
-}
+
 void Game::phisic ()
 {
         //log::messageln("DOWN /n DOWN");
 
     if (b->icon->getY() + b->icon->getHeight()/2  < pump->getY() )
     {
+       
         
         b->speed.y += 0.9832;
     }else{
@@ -144,12 +136,31 @@ void Game::phisic ()
     double nextY = b->icon->getY() + b->speed.y;
     //b->icon->setX(nextX);
     b->icon->setY(nextY);
+    background->moveTo(-b->speed.x);
     for (int i = 0; i < boxes.size(); i++)
     {
-        Box box =boxes[i];
-        box.icon->setX(box.icon->getX() - + b->speed.x);
+        Box tempbox =boxes[i];
+        tempbox.icon->setX(tempbox.icon->getX() - + b->speed.x);
+        spSprite box = boxes[i].icon;
+        spSprite bartsprite = b->icon;
+        double ax1 = box->getX();
+        double ax2 = box->getX() + box->getWidth()*box->getScaleX();
+        double ay1 = box->getY();
+        double ay2 = box->getY() + box->getHeight()*box->getScaleY();
+        
+        double x1 = bartsprite->getX();
+        double x2 = bartsprite->getX() + bartsprite->getWidth()*bartsprite->getScaleX();
+        double y1 = bartsprite->getY();
+        double y2 = bartsprite->getY() + bartsprite->getHeight()*bartsprite->getScaleY();
+        if (((x1 > ax1 && x1 < ax2)
+             || (x2 > ax1 && x2 < ax2))
+            && ((y1 > ay1 && y1 < ay2)
+                || (y2 > ay1 && y2 < ay2)))
+        {
+            hit++;
+        }
+
     }
-    colision();
     
 }
 
@@ -182,18 +193,21 @@ void Game::keylistener(Event *event)
         }
         case SDLK_RIGHT:
             b->speed.x += 0.8;
+            
             break;
         case SDLK_LEFT:
         {
             if (b->speed.x > 0)
             {
                 b->speed.x -= 0.5;
+                
             }
                 break;
         }
         case SDLK_SPACE:
         {
             b->speed.x -= 2.8;
+            
             break;
         }
             

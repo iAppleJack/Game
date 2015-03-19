@@ -17,6 +17,7 @@ private:
 public:
     Vector2 speed;
     spSprite icon;
+    double lenght;
     int step;
     Bart();
     Bart(double x, double y);
