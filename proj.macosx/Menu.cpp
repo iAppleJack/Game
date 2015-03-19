@@ -10,12 +10,27 @@
 #include "res.h"
 #include "Game.h"
 using namespace oxygine;
-void load()
+
+Menu::Menu()
+{
+    load();
+}
+spGame game;
+void Menu::load()
 {
     res::load();
-    spGame game = new Game;
+    game = new Game;
 	game->init();
     game->attachTo(getStage());
-
-
+    spTween t = game->addTween(TweenDummy(), 16.6);
+	t->setDoneCallback(CLOSURE(this, &Menu::nextTakt));
+    
 }
+
+void Menu::nextTakt(Event *e)
+{
+    game->phisic();
+    spTween t = game->addTween(TweenDummy(), 16.6);
+	t->setDoneCallback(CLOSURE(this, &Menu::nextTakt));
+}
+

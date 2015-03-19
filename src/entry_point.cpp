@@ -70,8 +70,8 @@ void run()
 
 	//DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff
 	DebugActor::show();
+    Menu *m = new Menu();
     
-    load();
 	//initialize this example stuff. see example.cpp
 
 #ifdef EMSCRIPTEN
@@ -87,6 +87,7 @@ void run()
 	while (1)
 	{
 		int done = mainloop();
+        
 		if (done)
 			break;
 	}

@@ -6,4 +6,11 @@
 //  Copyright (c) 2015 oxygine. All rights reserved.
 //
 
-void load();
+
+class Menu{
+public:
+    Menu();
+    void load();
+    void nextTakt(oxygine::Event *e);
+};
+

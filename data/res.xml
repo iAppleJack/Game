@@ -5,7 +5,9 @@
 		<image file="anim.png" cols = "7" />
 		<image file="button.png"/>
         <image file="head.png"/>
+        <image file="pump.png"/>
         <image file="sky.jpg"/>
+        <image file="box.png"/>
 	</atlas>
 	
 	<set path = "fonts" />
