@@ -52,6 +52,7 @@ void run()
 	//we could setup initial window size on SDL builds
 	desc.w = 960;
 	desc.h = 640;
+    
 	//marmalade settings could be changed from emulator's menu
 #endif
 
