@@ -19,11 +19,15 @@
 		2DC477AC10D6C07B3FE008F6 /* entry_point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 360377333740D8A2FD15BBE6 /* entry_point.cpp */; };
 		3A631A475DE035FC53ADE5EA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B12E3C9D554D9FE28101D /* images */; };
 		491112BF1AB9C525003F3FBB /* res.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 491112BD1AB9C525003F3FBB /* res.cpp */; };
-		491112C21AB9C64C003F3FBB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 491112C01AB9C64C003F3FBB /* Game.cpp */; };
+		4914EE3B1ACDC4B300C6F7E5 /* jButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4914EE391ACDC4B300C6F7E5 /* jButton.cpp */; };
 		494381A31AB9DF1F00645332 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381A11AB9DF1F00645332 /* Menu.cpp */; };
-		494381AE1AB9EEFF00645332 /* Bart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381AC1AB9EEFF00645332 /* Bart.cpp */; };
-		494381B41ABB36F200645332 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381B21ABB36F200645332 /* Box.cpp */; };
-		494381B71ABB67E400645332 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494381B51ABB67E400645332 /* Background.cpp */; };
+		49DE5FE11ACEE8CC00B056A6 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5FD91ACEE8CC00B056A6 /* Background.cpp */; };
+		49DE5FE21ACEE8CC00B056A6 /* Fortress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5FDB1ACEE8CC00B056A6 /* Fortress.cpp */; };
+		49DE5FE31ACEE8CC00B056A6 /* Land.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5FDD1ACEE8CC00B056A6 /* Land.cpp */; };
+		49DE5FE41ACEE8CC00B056A6 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5FDF1ACEE8CC00B056A6 /* Runner.cpp */; };
+		49DE5FE71ACEE91B00B056A6 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5FE51ACEE91B00B056A6 /* Box.cpp */; };
+		49DE5FEC1AD0294500B056A6 /* HP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5FEA1AD0294500B056A6 /* HP.cpp */; };
+		49E506221AC9966A004C1E75 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49E506201AC9966A004C1E75 /* Unit.cpp */; };
 		C8860D93875589970329DCCD /* data.js in Resources */ = {isa = PBXBuildFile; fileRef = 4DA100C319512824B7570663 /* data.js */; };
 		CD59C69314E9E74CD0A11E03 /* pack.py in Resources */ = {isa = PBXBuildFile; fileRef = F6123B1E6FE4471A00F49751 /* pack.py */; };
 		EFF139F8BA484314F7AAF645 /* res.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5DE458993031811A4C7D28C1 /* res.xml */; };
@@ -102,16 +106,24 @@
 		360377333740D8A2FD15BBE6 /* entry_point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entry_point.cpp; path = ../src/entry_point.cpp; sourceTree = "<group>"; };
 		491112BD1AB9C525003F3FBB /* res.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = res.cpp; sourceTree = "<group>"; };
 		491112BE1AB9C525003F3FBB /* res.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = res.h; sourceTree = "<group>"; };
-		491112C01AB9C64C003F3FBB /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		491112C11AB9C64C003F3FBB /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		4914EE391ACDC4B300C6F7E5 /* jButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jButton.cpp; sourceTree = "<group>"; };
+		4914EE3A1ACDC4B300C6F7E5 /* jButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jButton.h; sourceTree = "<group>"; };
 		494381A11AB9DF1F00645332 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		494381A21AB9DF1F00645332 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
-		494381AC1AB9EEFF00645332 /* Bart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bart.cpp; sourceTree = "<group>"; };
-		494381AD1AB9EEFF00645332 /* Bart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bart.h; sourceTree = "<group>"; };
-		494381B21ABB36F200645332 /* Box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box.cpp; sourceTree = "<group>"; };
-		494381B31ABB36F200645332 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
-		494381B51ABB67E400645332 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
-		494381B61ABB67E400645332 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		49DE5FD91ACEE8CC00B056A6 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
+		49DE5FDA1ACEE8CC00B056A6 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		49DE5FDB1ACEE8CC00B056A6 /* Fortress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fortress.cpp; sourceTree = "<group>"; };
+		49DE5FDC1ACEE8CC00B056A6 /* Fortress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fortress.h; sourceTree = "<group>"; };
+		49DE5FDD1ACEE8CC00B056A6 /* Land.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Land.cpp; sourceTree = "<group>"; };
+		49DE5FDE1ACEE8CC00B056A6 /* Land.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Land.h; sourceTree = "<group>"; };
+		49DE5FDF1ACEE8CC00B056A6 /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
+		49DE5FE01ACEE8CC00B056A6 /* Runner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runner.h; sourceTree = "<group>"; };
+		49DE5FE51ACEE91B00B056A6 /* Box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Box.cpp; path = ../src/Box.cpp; sourceTree = "<group>"; };
+		49DE5FE61ACEE91B00B056A6 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Box.h; path = ../src/Box.h; sourceTree = "<group>"; };
+		49DE5FEA1AD0294500B056A6 /* HP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HP.cpp; sourceTree = "<group>"; };
+		49DE5FEB1AD0294500B056A6 /* HP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HP.h; sourceTree = "<group>"; };
+		49E506201AC9966A004C1E75 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Unit.cpp; sourceTree = "<group>"; };
+		49E506211AC9966A004C1E75 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unit.h; sourceTree = "<group>"; };
 		4DA100C319512824B7570663 /* data.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wtf; name = data.js; path = ../data/data.js; sourceTree = "<group>"; };
 		5DE458993031811A4C7D28C1 /* res.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wtf; name = res.xml; path = ../data/res.xml; sourceTree = "<group>"; };
 		7F3B12E3C9D554D9FE28101D /* images */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = images; path = ../data/images; sourceTree = "<group>"; };
@@ -207,19 +219,14 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4904E9E11ACB475500EFAB85 /* Unit */,
 				360377333740D8A2FD15BBE6 /* entry_point.cpp */,
 				491112BD1AB9C525003F3FBB /* res.cpp */,
 				491112BE1AB9C525003F3FBB /* res.h */,
-				491112C01AB9C64C003F3FBB /* Game.cpp */,
-				491112C11AB9C64C003F3FBB /* Game.h */,
 				494381A11AB9DF1F00645332 /* Menu.cpp */,
 				494381A21AB9DF1F00645332 /* Menu.h */,
-				494381AC1AB9EEFF00645332 /* Bart.cpp */,
-				494381AD1AB9EEFF00645332 /* Bart.h */,
-				494381B21ABB36F200645332 /* Box.cpp */,
-				494381B31ABB36F200645332 /* Box.h */,
-				494381B51ABB67E400645332 /* Background.cpp */,
-				494381B61ABB67E400645332 /* Background.h */,
+				4914EE391ACDC4B300C6F7E5 /* jButton.cpp */,
+				4914EE3A1ACDC4B300C6F7E5 /* jButton.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -233,6 +240,27 @@
 				04A57D8C1872012D0068B1E5 /* Standard DMG */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4904E9E11ACB475500EFAB85 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				49DE5FE51ACEE91B00B056A6 /* Box.cpp */,
+				49DE5FE61ACEE91B00B056A6 /* Box.h */,
+				49DE5FD91ACEE8CC00B056A6 /* Background.cpp */,
+				49DE5FDA1ACEE8CC00B056A6 /* Background.h */,
+				49DE5FDB1ACEE8CC00B056A6 /* Fortress.cpp */,
+				49DE5FDC1ACEE8CC00B056A6 /* Fortress.h */,
+				49DE5FDD1ACEE8CC00B056A6 /* Land.cpp */,
+				49DE5FDE1ACEE8CC00B056A6 /* Land.h */,
+				49DE5FDF1ACEE8CC00B056A6 /* Runner.cpp */,
+				49DE5FE01ACEE8CC00B056A6 /* Runner.h */,
+				49E506211AC9966A004C1E75 /* Unit.h */,
+				49E506201AC9966A004C1E75 /* Unit.cpp */,
+				49DE5FEA1AD0294500B056A6 /* HP.cpp */,
+				49DE5FEB1AD0294500B056A6 /* HP.h */,
+			);
+			name = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,13 +381,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DE5FE41ACEE8CC00B056A6 /* Runner.cpp in Sources */,
+				49DE5FE31ACEE8CC00B056A6 /* Land.cpp in Sources */,
 				2DC477AC10D6C07B3FE008F6 /* entry_point.cpp in Sources */,
+				49DE5FE21ACEE8CC00B056A6 /* Fortress.cpp in Sources */,
+				4914EE3B1ACDC4B300C6F7E5 /* jButton.cpp in Sources */,
+				49E506221AC9966A004C1E75 /* Unit.cpp in Sources */,
+				49DE5FE11ACEE8CC00B056A6 /* Background.cpp in Sources */,
 				491112BF1AB9C525003F3FBB /* res.cpp in Sources */,
 				494381A31AB9DF1F00645332 /* Menu.cpp in Sources */,
-				494381B41ABB36F200645332 /* Box.cpp in Sources */,
-				491112C21AB9C64C003F3FBB /* Game.cpp in Sources */,
-				494381AE1AB9EEFF00645332 /* Bart.cpp in Sources */,
-				494381B71ABB67E400645332 /* Background.cpp in Sources */,
+				49DE5FEC1AD0294500B056A6 /* HP.cpp in Sources */,
+				49DE5FE71ACEE91B00B056A6 /* Box.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

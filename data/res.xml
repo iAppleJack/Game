@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <resources>
 	<set path = "images" />
-	<atlas>
+	<atlas format="4444">
 		<image file="anim.png" cols = "7" />
 		<image file="button.png"/>
         <image file="head.png"/>
@@ -10,6 +10,11 @@
         <image file="box.png"/>
         <image file="background1.png"/>
         <image file="background2.png"/>
+        <image file="FRT.png"/>
+        <image file="blob-sprite.png" cols = "8" rows = "2" />
+        <image file="mouse.png" cols = "8" rows = "4" />
+        <image file="gad.png" cols = "6" rows = "6" />
+
 	</atlas>
 	
 	<set path = "fonts" />
