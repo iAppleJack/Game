@@ -75,8 +75,7 @@ void Menu::load()
     
    // builds.push_back(new Fortress(100, builds[0]->icon->getY() - 200,200,200));
     
-    units.push_back(new Runner(0, 10,0.5f,0.5f, "mouse"));
-    //units.push_back(new Wa(0, 10,0.5f,0.5f, "mouse"));
+       //units.push_back(new Wa(0, 10,0.5f,0.5f, "mouse"));
    // units.push_back(new Runner(80, 10,0.0,0.0));
   //  units.push_back(new Box(0 , 300, 200, 50));
     builds.push_back(new Box(300, builds[0]->icon->getY()-100,50,100));
@@ -98,6 +97,7 @@ void Menu::load()
     for (int i = 0; i < units.size(); i++)
     {
         addChild(units[i]->icon);
+        addChild(units[i]->hp->icon);
     }
     
     for (int i = 0; i < builds.size(); i++)
@@ -133,10 +133,12 @@ void Menu::load()
 
 void Menu::deleteUnit(int unitid)
 {
-    
+    removeChild(units[unitid]->hp->icon);
     removeChild(units[unitid]->icon);
+    
+    delete units[unitid]->hp;
     delete units[unitid];
-    units.erase(units.begin()+(unitid -1 ), units.begin()+unitid);
+    units.erase(units.begin() + unitid);
    // delete &u;
     
 }
@@ -146,20 +148,30 @@ void Menu::nextTakt(Event *e)
     
    
     
-    mtf->setText("test " + std::to_string(units[0]->icon->getWidth()));
+   // mtf->setText("test " + std::to_string(units[0]->icon->getWidth()));
     //units[2]->gomove(5);
-    
+    gravity();
     for (int i = 0; i < units.size(); i++)
     {
         
         units[i]->move();
+        units[i]->hp->hp --  ;
+        
     }
-    gravity();
+    for (int i = 0; i < units.size(); i++)
+    {
+        if ( units[i]->hp->hp <= 0)
+        {
+            deleteUnit(i);
+            break;
+        }
+    }
+    
    // us->gravity(units);
    // us->move();
    // printf("te");
-    Runner *r = (Runner*)units[0];
-    r->rotate();
+    //Runner *r = (Runner*)units[0];
+    //r->rotate();
     spTween t = this->addTween(TweenDummy(), 16.6);
 	t->setDoneCallback(CLOSURE(this, &Menu::nextTakt));
 }
@@ -279,16 +291,18 @@ void Menu::gravity()
         }
     for (int i = 0; i < builds.size(); i++)
     {
+        
         Unit  *unit = builds[i];
         Unit *myunitsprite = units[j];
+        
         double ax1 = unit->icon->getX() - unit->icon->getWidth()*unit->icon->getScaleX()*(unit->icon->getAnchorX());
         double ax2 = unit->icon->getX() + unit->icon->getWidth()*unit->icon->getScaleX()*(1 - unit->icon->getAnchorX());
-        double ay1 = unit->icon->getY() - + unit->icon->getHeight()*unit->icon->getScaleY()*(unit->icon->getAnchorY());;
-        double ay2 = unit->icon->getY() + unit->icon->getHeight()*unit->icon->getScaleY()*(1 - unit->icon->getAnchorX());;
+        double ay1 = unit->icon->getY() - + unit->icon->getHeight()*unit->icon->getScaleY()*(unit->icon->getAnchorY());
+        double ay2 = unit->icon->getY() + unit->icon->getHeight()*unit->icon->getScaleY()*(1 - unit->icon->getAnchorX());
         
-        double x1 = myunitsprite->icon->getX() - myunitsprite->icon->getWidth()*myunitsprite->icon->getScaleX()*(myunitsprite->icon->getAnchorX());;
-        double x2 = myunitsprite->icon->getX() + myunitsprite->icon->getWidth()*myunitsprite->icon->getScaleX()*( 1 - myunitsprite->icon->getAnchorX());;
-        double y1 = myunitsprite->icon->getY() - myunitsprite->icon->getHeight()*myunitsprite->icon->getScaleY()*(myunitsprite->icon->getAnchorY());;
+        double x1 = myunitsprite->icon->getX() - myunitsprite->icon->getWidth()*myunitsprite->icon->getScaleX()*(myunitsprite->icon->getAnchorX());
+        double x2 = myunitsprite->icon->getX() + myunitsprite->icon->getWidth()*myunitsprite->icon->getScaleX()*( 1 - myunitsprite->icon->getAnchorX());
+        double y1 = myunitsprite->icon->getY() - myunitsprite->icon->getHeight()*myunitsprite->icon->getScaleY()*(myunitsprite->icon->getAnchorY());
         double y2 = myunitsprite->icon->getY() + myunitsprite->icon->getHeight()*myunitsprite->icon->getScaleY()*(1 - (myunitsprite->icon->getAnchorY()));
         
         if (ax1 - x1 < 75 && ax1 - x1 > 0 &&  myunitsprite->speed.y < 0.2 && myunitsprite->speed.y >= - 0.2)

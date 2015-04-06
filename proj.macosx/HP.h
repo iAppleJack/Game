@@ -27,7 +27,9 @@ public:
     
     HP(double x, double y, int _maxhp, int width,  int height);
     void move(double x, double y);
+    void update();
     
 
     
 };
+

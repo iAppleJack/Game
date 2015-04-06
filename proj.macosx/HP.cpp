@@ -13,7 +13,7 @@
 using namespace oxygine;
 HP::HP (double x, double y, int _maxhp, int _width, int _height)
 {
-    this->hp = _height;
+    this->hp = _maxhp;
     this->maxhp = _maxhp;
     this->unitheight = _height;
     this->unitwidth = _width;
@@ -38,7 +38,14 @@ HP::HP (double x, double y, int _maxhp, int _width, int _height)
 
 void HP::move (double x, double y)
 {
+    if (this->hp < 0 )
+    {
+        this->hp = 0;
+    }
     this->icon->setX(x);
     this->icon->setY(y - this->unitheight);
+    this->icon->setScaleX((this->unitwidth/this->icon->getWidth())*((double) this->hp / this->maxhp));
+    
 }
+
 

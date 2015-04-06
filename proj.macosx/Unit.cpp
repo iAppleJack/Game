@@ -18,6 +18,7 @@ Unit::Unit ()
 
 Unit::Unit(double x, double y, std::string path, bool grav, double jump, double ax, double ay )
 {
+    
     this->jumppoint = 0.6;
     this->speed.x = 0;
     this->isgravity = grav;
@@ -29,7 +30,14 @@ Unit::Unit(double x, double y, std::string path, bool grav, double jump, double 
     this->icon->setPosition(x + 50*icon->getAnchorX(),y + 50*icon->getAnchorY());
     ResAnim *animation = res::ui.getResAnim(path);
     TweenAnim tw = TweenAnim(animation);
-    hp = new HP(x,y,10, 50,  50);
+    if (rand()%100 > 50 )
+    {
+        hp = new HP(x,y,120, 50,  50);
+    }
+    else{
+        hp = new HP(x,y,300, 50,  50);
+    }
+    
     
     
     //this->icon->setPosition(0, 50);
